@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Foreword: Privacy Policy</title>
+<meta name="description" content="Privacy Policy for the Foreword daily word puzzle game.">
+<style>
+  /*
+   * Foreword's own light palette, taken from app/src/ui/theme/colors.ts.
+   * THEME.LIGHT drives the defaults; THEME.DARK drives the media query, so a
+   * reader on a dark phone still sees the app rather than an inverted page.
+   * Changing a value here without changing it there breaks the match silently.
+   */
+  :root {
+    --bg:     #d0fff9;              /* LIGHT BACKGROUND_DEFAULT — SOFT_TEAL */
+    --panel:  #b6f5ed;              /* LIGHT BACKGROUND_DARKER  — DARKER_SOFT_TEAL */
+    --fg:     #1e3035;              /* LIGHT TEXT_DEFAULT — DARKER_LIGHT_CHARCOAL */
+    --muted:  #38545a;              /* LIGHT TEXT_DARKER  — MUTED_LIGHT_CHARCOAL */
+    --rule:   rgba(83, 133, 146, .30); /* LIGHT_CHARCOAL, softened to a hairline */
+    --accent: #a03f9b;              /* LIGHT TEXT_INFO — PURPLE */
+    --mark:   #4aac51;              /* GREEN, shared by both themes */
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg:     #1b2b2f;            /* DARK BACKGROUND_DEFAULT — CHARCOAL */
+      --panel:  #0c1a1d;            /* DARK BACKGROUND_DARKER  — DARK_TEAL */
+      --fg:     #d3d2d2;            /* DARK TEXT_DEFAULT — SOFT_GRAY */
+      --muted:  #9da5a6;            /* DARK TEXT_DARKER  — MUTED_GRAY */
+      --rule:   rgba(157, 165, 166, .22);
+      --accent: #ee7235;            /* DARK TEXT_INFO — ORANGE */
+    }
+  }
+
+  * { box-sizing: border-box; }
+
+  html { -webkit-text-size-adjust: 100%; }
+
+  body {
+    margin: 0;
+    padding: 3rem 1.25rem 5rem;
+    background: var(--bg);
+    color: var(--fg);
+    font: 17px/1.72 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    font-weight: 400;
+  }
+
+  main { max-width: 44rem; margin: 0 auto; }
+
+  h1 {
+    font-size: 1.8rem;
+    font-weight: 600;
+    line-height: 1.22;
+    letter-spacing: -.018em;
+    margin: 0 0 .4rem;
+  }
+
+  /*
+   * A rule above each section rather than a box around it. The page is long and
+   * mostly prose; a hairline separates without adding another edge to track.
+   */
+  h2 {
+    font-size: 1.16rem;
+    font-weight: 600;
+    letter-spacing: -.008em;
+    margin: 3.25rem 0 .85rem;
+    padding-top: 1.6rem;
+    border-top: 1px solid var(--rule);
+  }
+
+  h3 {
+    font-size: 1rem;
+    font-weight: 600;
+    margin: 2.1rem 0 .55rem;
+  }
+
+  /* The Play Console deletion URL lands on #delete-your-data. Keep it clear of
+     the viewport edge so the heading is visibly the target. */
+  h2, h3 { scroll-margin-top: 1.5rem; }
+
+  p { margin: 0 0 1.05rem; }
+
+  .dates {
+    color: var(--muted);
+    font-size: .875rem;
+    margin: 0 0 2rem;
+    padding-bottom: 1.25rem;
+    border-bottom: 2px solid var(--mark);
+  }
+
+  .lede {
+    background: var(--panel);
+    border-radius: 12px;
+    padding: 1.35rem 1.5rem;
+    margin: 1.75rem 0;
+  }
+  .lede ul { margin: 0; padding-left: 1.15rem; }
+  .lede li + li { margin-top: .55rem; }
+
+  ul, ol { padding-left: 1.3rem; margin: 0 0 1.05rem; }
+  li + li { margin-top: .45rem; }
+
+  a {
+    color: var(--accent);
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 3px;
+    overflow-wrap: anywhere;
+  }
+  a:hover { text-decoration-thickness: 2px; }
+
+  strong { font-weight: 620; }
+
+  /* Wide tables scroll inside their own box; the page body never does. */
+  .table-wrap {
+    overflow-x: auto;
+    margin: 1.25rem 0;
+    -webkit-overflow-scrolling: touch;
+  }
+  table {
+    border-collapse: collapse;
+    width: 100%;
+    min-width: 30rem;
+    font-size: .94rem;
+  }
+  th, td {
+    text-align: left;
+    vertical-align: top;
+    padding: .7rem .85rem .7rem 0;
+    border-bottom: 1px solid var(--rule);
+  }
+  th {
+    font-weight: 600;
+    color: var(--muted);
+    font-size: .78rem;
+    text-transform: uppercase;
+    letter-spacing: .05em;
+    border-bottom-color: var(--muted);
+  }
+  tr:last-child td { border-bottom: none; }
+
+  footer {
+    margin-top: 3.5rem;
+    padding-top: 1.4rem;
+    border-top: 1px solid var(--rule);
+    color: var(--muted);
+    font-size: .9rem;
+  }
+
+  @media (max-width: 30rem) {
+    body { padding: 2rem 1rem 4rem; font-size: 16px; }
+    h1 { font-size: 1.55rem; }
+    h2 { margin-top: 2.6rem; }
+  }
+</style>
+</head>
+<body>
+<main>
+
+<h1>Foreword: Privacy Policy</h1>
+<p class="dates"><strong>Effective date:</strong> 22 August 2026 &middot; <strong>Last updated:</strong> 26 September 2026</p>
+
+<p>Foreword (&ldquo;the app&rdquo;, &ldquo;we&rdquo;, &ldquo;us&rdquo;) is a daily word puzzle game published by
+<strong>pen&amp;string</strong> &mdash; pronounced &ldquo;pen and string&rdquo; &mdash; an individual developer based in the Philippines.</p>
+
+<p>This policy explains what the app collects, why, who it is shared with, and the choices you have.
+It applies to the Foreword mobile app on <strong>Google Play</strong>. Should the app later be published on
+another store, this policy will apply there too, and this line will name it.</p>
+
+<p><strong>Contact:</strong> <a href="mailto:penandstring.support@gmail.com">penandstring.support@gmail.com</a></p>
+
+<h2>1. The short version</h2>
+<div class="lede">
+<ul>
+  <li>The app <strong>never asks you to type your name, email address, phone number, or address.</strong> The only way we ever see an email address or a name is if you choose the optional Google sign-in in Section 3.</li>
+  <li>The first time you open the app it creates an <strong>anonymous account</strong> &mdash; a random ID with no personal details attached. It holds no name, no email address, and nothing you have typed.</li>
+  <li><strong>Your game progress stays on your device</strong> unless you choose the optional Google sign-in. Until then the only things that reach our servers are that anonymous ID, your player name (the one the app generated for you, or the one you replaced it with), and any <strong>error reports</strong> from faults the app ran into.</li>
+  <li>We do <strong>not</strong> sell your data. The app does show ads, and where you have consented to it those ads may be personalised &mdash; you can review or change that choice at any time from the app&rsquo;s Settings screen.</li>
+  <li>You can delete everything at any time from the app&rsquo;s Settings screen.</li>
+</ul>
+</div>
+
+<h2>2. Information the app collects</h2>
+
+<h3>2.1 Account information</h3>
+<div class="table-wrap">
+<table>
+<thead><tr><th>What</th><th>Why</th><th>When</th></tr></thead>
+<tbody>
+<tr><td>An anonymous account ID (a random identifier generated by our sign-in provider)</td><td>To count the app&rsquo;s players, to attach error reports to a device, and &mdash; if you connect Google &mdash; to save and restore your game progress</td><td>Created automatically the first time you open the app</td></tr>
+<tr><td>A player name</td><td>Shown in-app on your profile</td><td>Auto-generated for you (for example <code>FORE_WORD</code>); you may change it at most once a week, paying for the change in in-game gold (Section 2.2) or by watching rewarded ads</td></tr>
+<tr><td>The time you last changed your player name</td><td>To apply the limit of one name change a week, including across your devices</td><td>When you change your name. Kept on your device, and backed up with your progress only if you connect Google (Section 3)</td></tr>
+<tr><td>A device identifier generated by the app</td><td>To tell your devices apart when restoring progress and reading diagnostic logs</td><td>On first launch</td></tr>
+</tbody>
+</table>
+</div>
+
+<p>The anonymous account ID is <strong>not</strong> linked to your real identity. We do not receive your
+email address, your phone number, or any contact details when this account is created.</p>
+
+<p>The player name is chosen by you. <strong>Please do not enter your real name or any other personal
+information as your player name.</strong> Names are limited to 3&ndash;12 characters, may contain only letters and underscores, and can be changed at most once a week.</p>
+
+<h3>2.2 Game progress and settings</h3>
+<p>The app stores the information needed to resume your game <strong>on your device</strong>. It is copied to
+our servers only once you have connected the optional Google sign-in described in Section 3; before that,
+and again if you disconnect, it never leaves your device. What is stored, and backed up where you have
+connected:</p>
+<ul>
+  <li>Your rank, games played, wins, win streak, best streak, and combo counters</li>
+  <li>Your potion count and the time your potions next refill (potions are the app&rsquo;s play credits, shown in-game as the Potion of Wisdom)</li>
+  <li>Your charms &mdash; the Ward, Scry, Gild, and Wick helpers you can use during a puzzle: how many of each you hold, whether they came from your daily allowance or from a rewarded ad, and how many of each you have used in total</li>
+  <li>Your in-game gold: the total you have earned by playing and the total you have spent. Gold is earned only by playing &mdash; it cannot be bought with real money, and it has no value outside the app</li>
+  <li>Which daily puzzles you have started, solved, or completed, and on which dates</li>
+  <li>The date you began playing, used to date your progress from a fixed starting point</li>
+  <li>As a new player, how far you have progressed through the introductory puzzles</li>
+  <li>Your in-progress board state, your number of attempts, the charms you have used on it, and any extra guesses a charm has added to it</li>
+  <li>Your fastest solve time and the number of attempts your solves have taken</li>
+  <li>A short record of your recent games and of this week&rsquo;s games &mdash; for each, how many guesses it took and whether a charm was used &mdash; plus how many games you have used a charm on, and your progress towards this week&rsquo;s combo milestones</li>
+  <li>The avatar you have chosen, and how many rewarded ads you have watched</li>
+  <li>Your preferences: dark theme on/off, vibration on/off, sound on/off</li>
+</ul>
+<p>A few preferences are kept <strong>on your device only</strong> and are never copied to our servers, even if
+you connect Google: whether the voice lines are on, whether reminders are on, and whether you have been shown
+the tutorial.</p>
+<p><strong>Replaced saves.</strong> If you sign in on a device whose progress differs from the progress
+already stored for that account, the app keeps a copy of the save it replaced, so a game overwritten by
+accident can be given back to you. The copy holds only the game information listed above, is readable by
+nobody but your own account, and is erased when you delete your data.</p>
+
+<h3>2.3 Diagnostic logs</h3>
+<p>When something goes wrong, the app records a diagnostic entry so the problem can be fixed. Each
+entry contains: a timestamp, a severity level, a short tag and message, an optional error trace
+(capped at 2&nbsp;KB), the app version, the runtime version, the app-generated device identifier
+described above, and the player name you had at the moment the entry was written.</p>
+<p>These logs describe what the app was doing. They are not designed to contain personal information,
+and we do not deliberately place any in them.</p>
+<p><strong>How much of the log is uploaded depends on you.</strong> Until you connect the optional Google
+sign-in, only the entries recording an <strong>error</strong> &mdash; a fault or a crash &mdash; are copied to
+our servers; everything else stays on your device, where nothing reads it and nothing sends it, until it
+is overwritten by later entries or erased with the rest of your data. Once you have connected, the ordinary
+entries are uploaded as well, so a problem you report can be read in the context of what the app was doing
+before it.</p>
+
+<h3>2.4 Advertising</h3>
+<p>The app shows <strong>rewarded video ads</strong> &mdash; short, optional videos you may choose to watch in
+exchange for extra potions, extra charms, or a change of player name when you do not have enough gold for it. You are never required to watch an ad to play.</p>
+<p>Ads are served by <strong>Google AdMob</strong>. Whether they are personalised depends on you. Where the law
+requires your consent &mdash; in the European Economic Area, the UK, and Switzerland &mdash; the app presents
+Google&rsquo;s consent form before it requests any ad at all, and honours the answer you give. If you decline,
+or if you withdraw consent later, ads are <strong>non-personalised</strong>: chosen on general context rather
+than on a profile of your interests or browsing history.</p>
+<p>You can review or change that choice at any time from the app&rsquo;s <strong>Settings</strong> screen, under the
+privacy options entry.</p>
+<p>To serve and measure ads, for analytics, and to prevent fraud, Google&rsquo;s advertising software in the app
+collects limited technical information and sends it to Google:</p>
+<ul>
+  <li>your device&rsquo;s IP address, which may be used to estimate its general (country/region-level) location</li>
+  <li>your device&rsquo;s advertising identifier and app set identifier, along with technical details such as your device type and operating system version</li>
+  <li>how you interact with ads &mdash; for example, that one was loaded, shown, tapped, or watched to the end &mdash; and app launches</li>
+  <li>performance information about the app and the ad software, such as launch time, hang rate, and energy usage</li>
+</ul>
+<p>This information is encrypted in transit. Where you have consented to personalised advertising, Google may
+additionally use your advertising identifier to choose ads based on your interests.</p>
+<p><strong>Checking that you are online.</strong> Before it offers you an ad, the app makes a small request
+to a Google address that answers &ldquo;yes, you are connected&rdquo; and nothing else, so a genuine loss of
+connection can be told apart from an ad that simply was not available. Like any request over the internet it
+reaches Google with your device&rsquo;s IP address; it carries nothing else, no part of your account or your
+game, and its answer is not stored.</p>
+<p>Ad content is capped at a <strong>&ldquo;PG&rdquo;</strong> rating. This excludes the &ldquo;T&rdquo; (teen) and &ldquo;MA&rdquo; (mature)
+tiers, where Google places categories such as gambling, alcohol, and mature themes.</p>
+<p>Google&rsquo;s own privacy policy applies to that processing:
+<a href="https://policies.google.com/privacy">https://policies.google.com/privacy</a></p>
+
+<h3>2.5 What the app does <em>not</em> collect</h3>
+<p>The app does not request or collect:</p>
+<ul>
+  <li>Your phone number or postal address</li>
+  <li>Your name or email address, <strong>except</strong> where you choose the optional Google sign-in described in Section 3. There is no field anywhere in the app for typing either one</li>
+  <li>Precise or GPS location</li>
+  <li>Your contacts, calendar, photos, or files</li>
+  <li>Camera or microphone input (the app has no recording capability)</li>
+  <li>Health, fitness, financial, or payment information</li>
+  <li>Your browsing history or activity in other apps</li>
+</ul>
+
+<h3>2.6 Reminders and notifications</h3>
+<p>The app can send you optional reminders &mdash; for example, that a new daily puzzle is available, or
+that your potions have refilled. These are scheduled <strong>locally by your device</strong> using the
+operating system&rsquo;s own scheduler. They are not push notifications: the app does not register a push
+token, does not send notification data to any server, and does not transmit anything about your playing
+habits in order to decide when to remind you. Every reminder is worked out on the device, from
+information the device already holds.</p>
+<p>Reminders need your permission, which your device will ask for the first time they are enabled. You
+can turn them off at any time from the app&rsquo;s <strong>Settings</strong> screen, or withdraw the
+permission entirely in your device&rsquo;s system settings.</p>
+
+<h2>3. Optional Google sign-in</h2>
+<p>The app offers an optional feature that links your progress to a Google account, so you can restore
+it after reinstalling or on a second device. <strong>This feature is entirely optional. The app works fully
+without it.</strong></p>
+<p>If you choose to use it, the app asks Android to show you Google&rsquo;s own account chooser, provided by
+Google Play Services on your device. Where that is unavailable, the app falls back to signing you in
+through your browser. Either route ends the same way: Google returns a signed sign-in token, which the
+app passes to our sign-in provider in exchange for a session.</p>
+<p>That token identifies the Google account you picked and carries the account&rsquo;s email address and
+display name. Our sign-in provider (Supabase) stores them alongside your anonymous account so it can be
+recognised on a future device. <strong>The game itself never reads them:</strong> they are not shown in the app,
+are not copied into any table the app queries, and are not used to contact you, to advertise to you, or
+for any purpose other than recognising your account when you sign in again. They are erased when you
+delete your data. We never receive your Google password.</p>
+<p><strong>Google accounts have their own minimum age requirements, which vary by country. If you are below
+the age required in your country, do not use this feature &mdash; keep playing with the anonymous account,
+which requires nothing from you.</strong> Where a parent or guardian manages a child&rsquo;s Google account (for
+example through Google Family Link), the parent or guardian should decide whether to use this feature.</p>
+
+<h2>4. Children&rsquo;s privacy</h2>
+<p>Foreword is a word puzzle game intended for a general audience aged 13 and over. It is not directed
+to children under 13, and we do not knowingly collect personal information from them. We nonetheless
+take the following approach for every player, regardless of age:</p>
+<ul>
+  <li><strong>No personal details are ever requested.</strong> There is no registration form, no email field, no profile photo upload, and no way to enter contact information.</li>
+  <li><strong>Ad content is restricted.</strong> All ad content is capped at a <strong>&ldquo;PG&rdquo;</strong> rating, which excludes the &ldquo;T&rdquo; and &ldquo;MA&rdquo; tiers where Google places categories such as gambling, alcohol, and mature themes. Ads are personalised only where you have consented to it, and never where consent was required and was not given &mdash; see Section 2.4.</li>
+  <li><strong>No social features.</strong> There is no chat, no messaging, no friend list, no public leaderboard, and no way for players to contact one another or share content.</li>
+  <li><strong>No sale of your data.</strong> The Google AdMob software does transmit your device&rsquo;s advertising
+  identifier, IP address, ad interactions, and performance information to Google in order to serve and
+  measure advertisements and to prevent reward fraud, as described in Section 2.4. Where you have consented
+  to personalised advertising, Google also uses that identifier to select ads based on your interests.
+  Google is the only third party that receives anything, and it receives only what Section 2.4 lists.</li>
+</ul>
+<p>The identifiers we do store &mdash; the anonymous account ID and the app-generated device identifier &mdash;
+are used only to run the game itself: saving your progress, restoring it, and fixing crashes. They are
+not used to build a profile of you or to target advertising.</p>
+<p>We do not knowingly collect personal information from children in a manner that requires verifiable
+parental consent under the U.S. Children&rsquo;s Online Privacy Protection Act (COPPA), the EU General Data
+Protection Regulation, or the Philippine Data Privacy Act of 2012.</p>
+<p><strong>Parents and guardians:</strong> if you believe your child has provided personal information through the
+app &mdash; most likely by typing it into the player name field &mdash; please contact us at
+<a href="mailto:penandstring.support@gmail.com">penandstring.support@gmail.com</a> and we will delete it promptly. You may also
+delete all of your child&rsquo;s data directly from the app&rsquo;s Settings screen at any time without contacting us.</p>
+
+<h2>5. How the information is used</h2>
+<p>We use the information described above only to:</p>
+<ol>
+  <li>Save your game progress and restore it on your device or a new device</li>
+  <li>Run the game&rsquo;s daily puzzle, potion, charm, gold, ranking, and streak systems</li>
+  <li>Remember your display and accessibility preferences</li>
+  <li>Schedule the optional reminders you have chosen to receive</li>
+  <li>Diagnose crashes and fix problems in the app</li>
+  <li>Show the rewarded ads you choose to watch &mdash; personalised only where you have consented to that, as described in Section 2.4</li>
+  <li>Protect against fraud and abuse of the ad reward system</li>
+</ol>
+<p>We do <strong>not</strong> use it for profiling, credit or eligibility decisions, or automated decision-making
+that produces legal or similarly significant effects.</p>
+
+<h2>6. Legal bases for processing (EEA/UK users)</h2>
+<p>Where the GDPR or UK GDPR applies, we rely on:</p>
+<ul>
+  <li><strong>Contract</strong> (Art. 6(1)(b)) &mdash; to provide the game and save your progress</li>
+  <li><strong>Legitimate interests</strong> (Art. 6(1)(f)) &mdash; to diagnose faults, keep the app secure, and prevent abuse of ad rewards</li>
+  <li><strong>Consent</strong> (Art. 6(1)(a)) &mdash; where required for advertising in your region, collected through Google&rsquo;s consent form before ads are shown, and for optional Google sign-in</li>
+</ul>
+<p>You may withdraw consent at any time; withdrawing it does not affect processing that already took place.</p>
+
+<h2>7. Who your information is shared with</h2>
+<p>We do not sell your information and we do not share it for cross-context behavioural advertising.
+We use the following service providers:</p>
+<div class="table-wrap">
+<table>
+<thead><tr><th>Provider</th><th>Role</th><th>Privacy policy</th></tr></thead>
+<tbody>
+<tr><td><strong>Supabase Inc.</strong></td><td>Hosts the database and sign-in service that stores your anonymous account, progress, and logs</td><td><a href="https://supabase.com/privacy">supabase.com/privacy</a></td></tr>
+<tr><td><strong>Google (AdMob)</strong></td><td>Serves and measures the rewarded ads</td><td><a href="https://policies.google.com/privacy">policies.google.com/privacy</a></td></tr>
+<tr><td><strong>Google (Sign-In and Play Services)</strong></td><td>Optional account linking, only if you use it &mdash; including the on-device account chooser</td><td><a href="https://policies.google.com/privacy">policies.google.com/privacy</a></td></tr>
+<tr><td><strong>Expo / Expo Application Services</strong></td><td>Build and release tooling for the app</td><td><a href="https://expo.dev/privacy">expo.dev/privacy</a></td></tr>
+<tr><td><strong>Google Play</strong></td><td>Distributes the app; independently collects its own data about downloads</td><td><a href="https://policies.google.com/privacy">policies.google.com/privacy</a></td></tr>
+</tbody>
+</table>
+</div>
+<p>We may also disclose information where required by law, or to establish, exercise, or defend legal claims.</p>
+
+<h3>International transfers</h3>
+<p>Our service providers operate servers outside the Philippines, including in the United States and the
+European Union. Where personal data of EEA/UK users is transferred, our providers rely on the European
+Commission&rsquo;s Standard Contractual Clauses or an equivalent safeguard.</p>
+
+<h2>8. How long it is kept</h2>
+<ul>
+  <li><strong>Game progress and settings:</strong> kept while your account is active, and deleted when you delete your data.</li>
+  <li><strong>Diagnostic logs:</strong> kept while they remain useful for investigating a fault, and removed once they are not. They are erased in full whenever you delete your data, without waiting for that.</li>
+  <li><strong>Local data on your device:</strong> kept until you delete your data in-app or uninstall the app.</li>
+  <li><strong>Anonymous accounts with no activity:</strong> may be removed during maintenance once dormant for a long time. Deleting your data yourself is immediate and does not wait for this.</li>
+  <li><strong>A replaced save</strong> (Section 2.2): kept alongside the account that replaced it, and deleted when you delete your data.</li>
+  <li><strong>A deletion record:</strong> kept indefinitely after an account is deleted. It holds the date of
+  the deletion, the app version that requested it, and a one-way keyed digest of the deleted account
+  identifier &mdash; nothing else. The digest cannot be reversed, and because the key is held only on our
+  server it cannot be tested against a known identifier either. We rely on our legitimate interest
+  (GDPR Article 6(1)(f)) in evidencing that deletions were carried out and in preventing abuse of the
+  advertisement reward system through repeated deletion and recreation of accounts.</li>
+</ul>
+
+<h2>9. Your rights and choices</h2>
+
+<h3>Disconnecting your Google account</h3>
+<p>If you have linked a Google account you can disconnect it at any time from your profile screen in the
+app. Disconnecting signs you out on that device and stops further backups from it. The device goes back to
+holding a new anonymous account, as it did before you connected, and to sending only the error reports
+described in Section 2.3.</p>
+<p><strong>Disconnecting is not deletion.</strong> Your progress stays on the device, and the copy already
+backed up to our servers is kept, so that reconnecting the same Google account restores your game. If you
+want that stored copy erased, use the deletion route below.</p>
+
+<h3 id="delete-your-data">Deleting your data</h3>
+<p><strong>In the app.</strong> Open <strong>Settings &rarr; Delete My Data</strong>. After a confirmation
+step, this deletes, in one action:</p>
+<ul>
+  <li>Your account itself, including the Google sign-in link if you created one</li>
+  <li>Your rank, statistics, streaks, puzzle history, potions, charms, gold and settings, from our servers</li>
+  <li>The diagnostic logs uploaded from your devices</li>
+  <li>Everything the app has stored on the device you are holding</li>
+</ul>
+<p>No email, no waiting period, and nothing for us to action by hand. You do not need a Google account
+to use it &mdash; a player who never linked one still has an anonymous account, and this deletes that too.</p>
+<p><strong>By email.</strong> If you cannot reach the in-app control &mdash; you have lost the device, or
+uninstalled the app &mdash; email <strong><a href="mailto:penandstring.support@gmail.com">penandstring.support@gmail.com</a></strong>
+with the subject line <em>Delete my data</em>. We will erase the records and confirm once done, normally
+within 30 days. Because accounts are anonymous, please include the account or device identifier shown
+on the app&rsquo;s profile screen, or tell us which Google account you linked.</p>
+<p><strong>Uninstalling</strong> removes everything stored on your device, but it does not delete the copy on
+our servers. Use the in-app control before uninstalling if you want both gone.</p>
+<p>Deletion is permanent. Once your records are erased your progress cannot be restored, including by
+reconnecting the same Google account. One record survives it, described in Section 8.</p>
+
+<h3>Advertising choices</h3>
+<p>Rewarded ads are optional by design &mdash; simply do not choose to watch one. You can also limit ad
+tracking system-wide: on Android, that is <strong>Settings &rarr; Google &rarr; Ads &rarr;
+<em>Delete advertising ID</em></strong>.</p>
+
+<h3>Your legal rights</h3>
+<p>Depending on where you live, you may have the right to access, correct, delete, restrict, or object
+to our processing of your information, to data portability, and to lodge a complaint with a
+supervisory authority.</p>
+<ul>
+  <li><strong>EEA/UK (GDPR):</strong> the rights above; complaints to your national data protection authority.</li>
+  <li><strong>Philippines (Data Privacy Act of 2012):</strong> rights to be informed, to access, to object, to erasure or blocking, to damages, to data portability, and to file a complaint with the National Privacy Commission (<a href="https://privacy.gov.ph">privacy.gov.ph</a>).</li>
+  <li><strong>California (CCPA/CPRA):</strong> rights to know, delete, correct, and opt out of sale/sharing. <strong>We do not sell or share personal information</strong>, and we do not process sensitive personal information for inferring characteristics.</li>
+</ul>
+<p>To exercise any of these, email <strong><a href="mailto:penandstring.support@gmail.com">penandstring.support@gmail.com</a></strong>.
+We will respond within 30 days. Because accounts are anonymous, we may need the account or device
+identifier shown in the app to locate your data &mdash; we cannot identify you from your name or email alone.</p>
+
+<h2>10. Security</h2>
+<p>Data on our servers is protected by row-level security rules that restrict every record to the
+account that created it, so one player cannot read another player&rsquo;s data. Traffic between the app and
+our servers is encrypted in transit using TLS. Sign-in tokens are stored on your device in the
+operating system&rsquo;s own secure keystore, which on Android is the Android Keystore.</p>
+<p>No system is perfectly secure. If a breach affects your information, we will notify affected users
+and the relevant authorities as required by law.</p>
+
+<h2>11. Changes to this policy</h2>
+<p>We may update this policy as the app changes. The &ldquo;Last updated&rdquo; date at the top will change, and
+material changes will be announced in the app before they take effect. Continuing to use the app after
+a change means you accept the updated policy.</p>
+
+<h2>12. Contact</h2>
+<p><strong>pen&amp;string</strong> (pronounced &ldquo;pen and string&rdquo;)<br>
+Email: <strong><a href="mailto:penandstring.support@gmail.com">penandstring.support@gmail.com</a></strong><br>
+Country: Philippines</p>
+<p>For data protection questions under Philippine law, you may also contact the National Privacy
+Commission at <a href="https://privacy.gov.ph">privacy.gov.ph</a>.</p>
+
+<footer>Foreword &mdash; Privacy Policy. Last updated 26 September 2026.</footer>
+
+</main>
+</body>
+</html>
