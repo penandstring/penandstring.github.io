@@ -158,7 +158,7 @@
 <main>
 
 <h1>Foreword: Privacy Policy</h1>
-<p class="dates"><strong>Effective date:</strong> 22 August 2026 &middot; <strong>Last updated:</strong> 5 November 2026</p>
+<p class="dates"><strong>Effective date:</strong> 22 August 2026 &middot; <strong>Last updated:</strong> 15 November 2026</p>
 
 <p>Foreword (&ldquo;the app&rdquo;, &ldquo;we&rdquo;, &ldquo;us&rdquo;) is a daily word puzzle game published by
 <strong>pen&amp;string</strong> &mdash; pronounced &ldquo;pen and string&rdquo; &mdash; an individual developer based in the Philippines.</p>
@@ -174,10 +174,10 @@ another store, this policy will apply there too, and this line will name it.</p>
 <ul>
   <li>The app <strong>never asks you to type your name, email address, phone number, or address.</strong> The only way we ever see an email address or a name is if you choose the optional Google sign-in in Section 3.</li>
   <li>The first time you open the app it creates an <strong>anonymous account</strong> &mdash; a random ID with no personal details attached. It holds no name, no email address, and nothing you have typed.</li>
-  <li><strong>Your game progress stays on your device</strong> unless you choose the optional Google sign-in. Until then the only things that reach our servers are that anonymous ID, the player name the app generated for you, and any <strong>error reports</strong> from faults the app ran into.</li>
+  <li><strong>Your game progress stays on your device</strong> unless you choose the optional Google sign-in. Until then the only things that reach our servers are that anonymous ID, the player name the app generated for you, whether your phone allows the app&rsquo;s reminders (Section 2.6), and any <strong>error reports</strong> from faults the app ran into.</li>
   <li>We do <strong>not</strong> sell your data. The app does show ads, and where you have consented to it those ads may be personalised &mdash; you can review or change that choice at any time from the app&rsquo;s Settings screen.</li>
   <li>We advertise Foreword itself on Facebook and Instagram. To learn which of those ads led to an install, the app tells <strong>Meta</strong> when it is installed and opened, with your device&rsquo;s advertising ID &mdash; and, where the law requires your consent, only once you have given it (Section 2.7).</li>
-  <li>To count how many people install and open the game, the app uses <strong>Google Analytics for Firebase</strong>, which records installs, launches and how long the app is in use, under a random ID that is not your advertising ID &mdash; and, where the law requires your consent, only once you have given it (Section 2.8).</li>
+  <li>To count how many people install and open the game, the app uses <strong>Google Analytics for Firebase</strong>, which records installs, launches, how long the app is in use and the cards you share, under a random ID that is not your advertising ID &mdash; and, where the law requires your consent, only once you have given it (Section 2.8).</li>
   <li>You can delete everything at any time from the app&rsquo;s Settings screen.</li>
 </ul>
 </div>
@@ -234,8 +234,8 @@ you connect Google: whether the voice lines are on, the music volume, how many w
 the last eight days (which sets how lively your munis are and what is left in their pantry), the time of day you first played on each of
 the last fourteen days you played (which sets when your daily reminder arrives), whether reminders are on, which
 reminders have already been delivered, and a note of your progress as the day began (Section 2.6), whether you have been shown the tutorial, which of the
-invitations to connect Google you have been shown, whether the app has asked you to rate it and whether you went to Google Play to do so (the app
-is never told whether you left a rating), and when you last disconnected Google (see Section 9).</p>
+invitations to connect Google you have been shown and the day of the last one, whether and when the app last asked you to rate it and whether you went to Google Play to do so (the app
+is never told whether you left a rating), whether you have shared your first win streak&rsquo;s card and how many times the app has offered it (Section 2.9), and when you last disconnected Google (see Section 9).</p>
 <p><strong>Replaced saves.</strong> If you sign in on a device whose progress differs from the progress
 already stored for that account, the app keeps a copy of the save it replaced, so a game overwritten by
 accident can be given back to you. The copy holds only the game information listed above, is readable by
@@ -297,7 +297,7 @@ tiers, where Google places categories such as gambling, alcohol, and mature them
   <li>Camera or microphone input (the app has no recording capability)</li>
   <li>Health, fitness, financial, or payment information</li>
   <li>Your browsing history or activity in other apps</li>
-  <li>Your Facebook or Instagram account &mdash; there is no Facebook sign-in, and the app never learns whether you have either</li>
+  <li>Your Facebook or Instagram account &mdash; there is no Facebook sign-in. If you share a card (Section 2.9), the app learns only which app you picked to share it with, never your account there or what you post</li>
 </ul>
 
 <h3>2.6 Reminders and notifications</h3>
@@ -319,22 +319,33 @@ of your munis, and mention your own progress &mdash; how many more words your mu
 are to a goal, or that you have the gold for a new muni.</p>
 <p>These are scheduled <strong>locally by your device</strong> using the operating system&rsquo;s own
 scheduler. They are not push notifications: the app does not register a push token, does not send
-notification data to any server, and does not transmit anything about your playing habits in order to
+any reminder or its timing to a server, and does not transmit anything about your playing habits in order to
 decide when to remind you. Every reminder, including what it says and when it arrives, is worked out on the
 device, from information the device already holds. So that it does not repeat itself, the device keeps a short list of
 the reminders it has already delivered; and so that the evening thank-you can tell what the day brought, it
 keeps a note of your level, rank, best streak, munis and their bond levels as the day began. Both stay on
 your device and are never copied to our servers.</p>
-<p>Reminders need your permission, which your device will ask for the first time the app has a reminder
-to schedule &mdash; on a new install, once the opening lesson has been finished or skipped. You can turn them off at any time from the app&rsquo;s <strong>Settings</strong> screen, or withdraw the
-permission entirely in your device&rsquo;s system settings.</p>
+<p>Reminders need your permission. On a new install, once the opening lesson has been finished or skipped,
+the app shows a card on its Home screen explaining them; your device&rsquo;s own permission prompt appears
+only if you tap <strong>Allow</strong> on it, and where your device can no longer show that prompt, Allow opens
+the app&rsquo;s notification settings instead. While your phone has the app&rsquo;s notifications off, the card
+comes back after 3, 7 and 14 days and then every 20 days, and when you switch Reminders back on in the
+app&rsquo;s Settings. It is never shown if you have switched Reminders off in the app. You can turn reminders
+off at any time from the app&rsquo;s <strong>Settings</strong> screen, or withdraw the permission entirely in
+your device&rsquo;s system settings.</p>
+<p>So that we can count how many players&rsquo; phones are silencing reminders, the app sends with your
+anonymous account (Section 2.1) whether your phone currently allows the app&rsquo;s notifications &mdash;
+allowed, switched off, blocked in the phone&rsquo;s settings, or allowed but with Reminders switched off in the
+app &mdash; when the app last showed you the card, and how many times it has. This is sent whether or not you
+have connected Google, describes only the device that sent it last, and is used for nothing else.</p>
 
 <h3 id="install-measurement">2.7 Install measurement (Meta)</h3>
 <p>We pay for ads for Foreword on Meta&rsquo;s services &mdash; Facebook, Instagram, Messenger and the Meta
 Audience Network. To know which of those ads actually led someone to install and open the game, and so to stop
 paying for the ones that do not, the app includes <strong>Meta&rsquo;s software development kit</strong> (the
-&ldquo;Meta SDK&rdquo;), used for this purpose only. There is no Facebook sign-in, no sharing to Facebook, and
-nothing in the app reads from or posts to your Facebook or Instagram account.</p>
+&ldquo;Meta SDK&rdquo;), used for this purpose only. There is no Facebook sign-in, the Meta SDK is not used for
+sharing, and nothing in the app reads from or posts to your Facebook or Instagram account. A card you share
+goes through your phone&rsquo;s own share menu (Section 2.9).</p>
 <p>When it is allowed to run, the Meta SDK sends Meta:</p>
 <ul>
   <li>that the app was <strong>installed</strong>, and each time it is <strong>opened</strong> (an &ldquo;app activation&rdquo;), with the time it happened</li>
@@ -360,9 +371,9 @@ build an advertising profile of you.</p>
 own privacy policy: <a href="https://www.facebook.com/privacy/policy">https://www.facebook.com/privacy/policy</a></p>
 
 <h3 id="usage-statistics">2.8 Usage statistics (Google Analytics for Firebase)</h3>
-<p>To know how many people install the game and how often they come back to it, the app includes
-<strong>Google Analytics for Firebase</strong>, a measurement service provided by Google. It is used for this
-purpose only. When it is allowed to run, it records:</p>
+<p>To know how many people install the game, how often they come back to it, and which of its cards they
+share, the app includes <strong>Google Analytics for Firebase</strong>, a measurement service provided by
+Google. It is used for these purposes only. When it is allowed to run, it records:</p>
 <ul>
   <li>that the app was <strong>opened for the first time</strong> after being installed, each time it is
   <strong>opened</strong>, and how long it stays in use (its &ldquo;sessions&rdquo;)</li>
@@ -372,10 +383,13 @@ purpose only. When it is allowed to run, it records:</p>
   <li>technical details such as your device model, operating system version, language, the app&rsquo;s version,
   the install referrer Google Play attaches to an install, and the country and city Google estimates from your
   device&rsquo;s IP address</li>
+  <li>when the app offers you a card to share, when you tap <strong>Share</strong>, and when you pick an app to
+  share it with (Section 2.9): which card it was, where in the app it was offered, the name of the app you
+  picked (for example Instagram or WhatsApp), and whether the share earned a gold bonus</li>
 </ul>
 <p>It does <strong>not</strong> read your device&rsquo;s advertising ID or its Android ID &mdash; the app switches
-both off &mdash; and it does not receive your game progress, your player name, your anonymous account ID, or
-anything you do inside the game. The app records no events of its own apart from noting each launch.</p>
+both off &mdash; and it does not receive your game progress, your player name or your anonymous account ID.
+Apart from noting each launch, the only events the app records are the sharing ones above.</p>
 <p><strong>Consent comes first.</strong> Google Analytics for Firebase ships switched off and collects nothing
 until the app turns it on. Where the law requires your consent &mdash; the European Economic Area, the UK and
 Switzerland &mdash; the app turns it on only if, in the same Google consent form described in Section 2.4, you
@@ -387,6 +401,19 @@ Outside those regions it runs from the first launch.</p>
 advertising account, we do not let it be used for personalised ads, and we have not allowed Google to use it to
 improve its other products and services. Google&rsquo;s privacy policy:
 <a href="https://policies.google.com/privacy">https://policies.google.com/privacy</a></p>
+
+<h3 id="sharing">2.9 Sharing a card</h3>
+<p>When you reach certain milestones &mdash; at present, your first win streak &mdash; the app may offer you a
+card to share. If you tap <strong>Share</strong>, the app draws the card as a picture on your device, copies a
+short caption to your clipboard, and opens your phone&rsquo;s own share menu, where you choose where it goes.
+The card shows the milestone, the game&rsquo;s munis and a QR code; it carries no player name, account ID or
+board. The caption and the QR code hold a link to the game&rsquo;s Google Play page, tagged so that an install
+from it can be told apart as coming from a shared card (the install referrer in Sections 2.7 and 2.8).</p>
+<p>The app never posts anything itself and is not told whether you posted. It learns which app you picked from
+the menu and how long you were away, and uses that to decide whether to pay the card&rsquo;s one-time gold
+bonus; the app picked is also recorded by Google Analytics for Firebase where that is allowed (Section 2.8).
+The picture stays in the app&rsquo;s own cache on your device until the next card replaces it. Whether you have
+shared the card, and how many times it has been offered, are kept on your device only.</p>
 
 <h2>3. Optional Google sign-in</h2>
 <p>The app offers an optional feature that links your progress to a Google account, so you can restore
@@ -414,7 +441,7 @@ take the following approach for every player, regardless of age:</p>
 <ul>
   <li><strong>No personal details are ever requested.</strong> There is no registration form, no email field, no profile photo upload, and no way to enter contact information.</li>
   <li><strong>Ad content is restricted.</strong> All ad content is capped at a <strong>&ldquo;PG&rdquo;</strong> rating, which excludes the &ldquo;T&rdquo; and &ldquo;MA&rdquo; tiers where Google places categories such as gambling, alcohol, and mature themes. Ads are personalised only where you have consented to it, and never where consent was required and was not given &mdash; see Section 2.4.</li>
-  <li><strong>No social features.</strong> There is no chat, no messaging, no friend list, no public leaderboard, and no way for players to contact one another or share content.</li>
+  <li><strong>No social features.</strong> There is no chat, no messaging, no friend list, no public leaderboard, and no way for players to contact one another. A milestone card can be shared through the phone&rsquo;s own share menu (Section 2.9), but the app posts nothing itself, and nothing leaves the device unless you pick an app and post it there.</li>
   <li><strong>No sale of your data.</strong> The Google AdMob software does transmit your device&rsquo;s advertising
   identifier, IP address, ad interactions, and performance information to Google in order to serve and
   measure advertisements and to prevent reward fraud, as described in Section 2.4. Where you have consented
@@ -471,7 +498,7 @@ not for its own advertising. We use the following service providers:</p>
 <tr><td><strong>Supabase Inc.</strong></td><td>Hosts the database and sign-in service that stores your anonymous account, progress, and logs</td><td><a href="https://supabase.com/privacy">supabase.com/privacy</a></td></tr>
 <tr><td><strong>Google (AdMob)</strong></td><td>Serves and measures the rewarded ads</td><td><a href="https://policies.google.com/privacy">policies.google.com/privacy</a></td></tr>
 <tr><td><strong>Meta Platforms (Meta SDK)</strong></td><td>Measures which of our ads on Facebook, Instagram and the Audience Network led to an install &mdash; Section 2.7</td><td><a href="https://www.facebook.com/privacy/policy">facebook.com/privacy/policy</a></td></tr>
-<tr><td><strong>Google (Google Analytics for Firebase)</strong></td><td>Counts installs, launches and sessions &mdash; Section 2.8</td><td><a href="https://policies.google.com/privacy">policies.google.com/privacy</a></td></tr>
+<tr><td><strong>Google (Google Analytics for Firebase)</strong></td><td>Counts installs, launches, sessions and shared cards &mdash; Section 2.8</td><td><a href="https://policies.google.com/privacy">policies.google.com/privacy</a></td></tr>
 <tr><td><strong>Google (Sign-In and Play Services)</strong></td><td>Optional account linking, only if you use it &mdash; including the on-device account chooser</td><td><a href="https://policies.google.com/privacy">policies.google.com/privacy</a></td></tr>
 <tr><td><strong>Expo / Expo Application Services</strong></td><td>Build and release tooling for the app</td><td><a href="https://expo.dev/privacy">expo.dev/privacy</a></td></tr>
 <tr><td><strong>Google Play</strong></td><td>Distributes the app; independently collects its own data about downloads</td><td><a href="https://policies.google.com/privacy">policies.google.com/privacy</a></td></tr>
@@ -583,7 +610,7 @@ Country: Philippines</p>
 <p>For data protection questions under Philippine law, you may also contact the National Privacy
 Commission at <a href="https://privacy.gov.ph">privacy.gov.ph</a>.</p>
 
-<footer>Foreword &mdash; Privacy Policy. Last updated 5 November 2026.</footer>
+<footer>Foreword &mdash; Privacy Policy. Last updated 15 November 2026.</footer>
 
 </main>
 </body>
