@@ -158,7 +158,7 @@
 <main>
 
 <h1>Foreword: Privacy Policy</h1>
-<p class="dates"><strong>Effective date:</strong> 22 August 2026 &middot; <strong>Last updated:</strong> 17 November 2026</p>
+<p class="dates"><strong>Effective date:</strong> 22 August 2026 &middot; <strong>Last updated:</strong> 24 November 2026</p>
 
 <p>Foreword (&ldquo;the app&rdquo;, &ldquo;we&rdquo;, &ldquo;us&rdquo;) is a daily word puzzle game published by
 <strong>pen&amp;string</strong> &mdash; pronounced &ldquo;pen and string&rdquo; &mdash; an individual developer based in the Philippines.</p>
@@ -177,7 +177,8 @@ another store, this policy will apply there too, and this line will name it.</p>
   <li><strong>Your game progress stays on your device</strong> unless you choose the optional Google sign-in. Until then the only things that reach our servers are that anonymous ID, the player name the app generated for you, a daily summary of how you played (Section 2.2), whether your phone allows the app&rsquo;s reminders (Section 2.6), and any <strong>error reports</strong> from faults the app ran into.</li>
   <li>We do <strong>not</strong> sell your data. The app does show ads, and where you have consented to it those ads may be personalised &mdash; you can review or change that choice at any time from the app&rsquo;s Settings screen.</li>
   <li>We advertise Foreword itself on Facebook and Instagram. To learn which of those ads led to an install, the app tells <strong>Meta</strong> when it is installed and opened, with your device&rsquo;s advertising ID &mdash; and, where the law requires your consent, only once you have given it (Section 2.7).</li>
-  <li>To count how many people install and open the game, the app uses <strong>Google Analytics for Firebase</strong>, which records installs, launches, how long the app is in use and the cards you share, under a random ID that is not your advertising ID &mdash; and, where the law requires your consent, only once you have given it (Section 2.8).</li>
+  <li>To count how many people install and open the game, the app uses <strong>Google Analytics for Firebase</strong>, which records installs, launches, how long the app is in use and the cards you share, under a random ID that is not your advertising ID &mdash; and, where the law requires your consent, only once you have given it (Section 2.8). Under the same consent, <strong>Firebase Crashlytics</strong> tells us when the app crashes and where in its code (Section 2.10).</li>
+  <li>The app checks for and downloads updates to its own game code through <strong>Expo&rsquo;s update service</strong>, which receives a random ID the update service creates on your device (Section 2.11).</li>
   <li>You can delete everything at any time from the app&rsquo;s Settings screen.</li>
 </ul>
 </div>
@@ -215,7 +216,9 @@ a weekly task&rsquo;s gold &mdash; so they are not lost if the app is removed be
 day you open it, filed under your account and the player ID it generated (never your name or email address). It
 holds counts only: how many times you opened the app and for how long, how many games you won, lost or skipped and
 the guesses they took, which charms you used and at which guess, how many games with each charm you won, how many
-charm cards you opened with none left, how many rewarded ads you watched and what for, and at the end of the day
+charm cards you opened with none left, how many rewarded ads you watched and what for, how far you got towards a
+game that day (pressing <strong>Play</strong>, the tutorial&rsquo;s offer and your answer to it, opening and closing
+the lesson and at which of its steps, starting a level, being shown the notification card), and at the end of the day
 your rank, total games and wins, win run, level, gold and charms in hand &mdash; with the app version and whether
 your phone is Android or iOS. It never includes your puzzles, your guesses&rsquo; letters or anything you type. We
 use it to see how players get on with the game &mdash; who comes back, which puzzles and charms are too hard or too
@@ -398,10 +401,12 @@ Google. It is used for these purposes only. When it is allowed to run, it record
   <li>when the app offers you a card to share, when you tap <strong>Share</strong>, and when you pick an app to
   share it with (Section 2.9): which card it was, where in the app it was offered, the name of the app you
   picked (for example Instagram or WhatsApp), and whether the share earned a gold bonus</li>
+  <li>when the app offers you an update (Section 2.11), and whether you tap <strong>Update</strong> or
+  <strong>Later</strong>: only whether it was an in-app or a store update, and whether it was required</li>
 </ul>
 <p>It does <strong>not</strong> read your device&rsquo;s advertising ID or its Android ID &mdash; the app switches
 both off &mdash; and it does not receive your game progress, your player name or your anonymous account ID.
-Apart from noting each launch, the only events the app records are the sharing ones above.</p>
+Apart from noting each launch, the only events the app records are the sharing and update ones above.</p>
 <p><strong>Consent comes first.</strong> Google Analytics for Firebase ships switched off and collects nothing
 until the app turns it on. Where the law requires your consent &mdash; the European Economic Area, the UK and
 Switzerland &mdash; the app turns it on only if, in the same Google consent form described in Section 2.4, you
@@ -415,9 +420,10 @@ improve its other products and services. Google&rsquo;s privacy policy:
 <a href="https://policies.google.com/privacy">https://policies.google.com/privacy</a></p>
 
 <h3 id="sharing">2.9 Sharing a card</h3>
-<p>When you reach certain milestones &mdash; at present, your first win streak &mdash; the app may offer you a
-card to share. If you tap <strong>Share</strong>, the app draws the card as a picture on your device, copies a
-short caption to your clipboard, and opens your phone&rsquo;s own share menu, where you choose where it goes.
+<p>When you reach certain milestones &mdash; at present, your first win streak and each new muni you adopt &mdash;
+the app may offer you a card to share. If you tap <strong>Share</strong>, the app draws the card on your device, as a
+picture or a short looping animation, copies a short caption to your clipboard, and opens your phone&rsquo;s own
+share menu, where you choose where it goes.
 The card shows the milestone, the game&rsquo;s munis and a QR code; it carries no player name, account ID or
 board. The caption and the QR code hold a link to the game&rsquo;s Google Play page, tagged so that an install
 from it can be told apart as coming from a shared card (the install referrer in Sections 2.7 and 2.8).</p>
@@ -426,6 +432,36 @@ the menu and how long you were away, and uses that to decide whether to pay the 
 bonus; the app picked is also recorded by Google Analytics for Firebase where that is allowed (Section 2.8).
 The picture stays in the app&rsquo;s own cache on your device until the next card replaces it. Whether you have
 shared the card, and how many times it has been offered, are kept on your device only.</p>
+
+<h3 id="crash-reports">2.10 Crash reports (Firebase Crashlytics)</h3>
+<p>When the app crashes, or closes because of a fault in its code, <strong>Firebase Crashlytics</strong>, a
+service provided by Google, records what went wrong so that we can find and fix it. A report holds:</p>
+<ul>
+  <li>where in the app&rsquo;s code the fault happened (a stack trace), and the time</li>
+  <li>technical details of the device at that moment, such as its model, operating system version, orientation,
+  free memory and storage, and whether it is rooted</li>
+  <li>the app&rsquo;s version</li>
+  <li>a random <strong>installation ID</strong> that Crashlytics creates on your device. It is not your
+  advertising ID, your Android ID or your anonymous account ID, and uninstalling the app replaces it</li>
+  <li>which tile set and lettering style you had chosen in the shop, since the board is drawn differently in each</li>
+</ul>
+<p>It holds no player name, no account ID, no game progress and nothing you type. Crash reports follow the same
+consent as the usage statistics in Section 2.8: Crashlytics ships switched off, and the app turns it on only where
+that consent is given or not required. A report saved while it is off is sent once it is allowed, and deleted if
+it is not. Google processes these reports on our behalf. Google&rsquo;s privacy policy:
+<a href="https://policies.google.com/privacy">https://policies.google.com/privacy</a></p>
+
+<h3 id="app-updates">2.11 App updates</h3>
+<p>The app can receive updates to its own game code &mdash; fixes, puzzles, new features &mdash; without a new
+download from Google Play, through <strong>Expo Application Services (EAS Update)</strong>, provided by Expo. When
+the app opens, and when you come back to it after a while, it asks Expo&rsquo;s update service whether there is
+something newer for your version. That request carries the app&rsquo;s version and build, your platform, and a
+random <strong>client ID</strong> the update service creates on your device and keeps until the app is
+uninstalled; it is not your advertising ID or your account ID, and Expo uses it to deliver updates and to count
+how many devices run each one. With <strong>Auto-update</strong> on (Settings), a newer version downloads quietly
+and runs from the next launch; with it off, the app offers it to you first.</p>
+<p>The app also reads, from our own database, which version of Foreword is the newest in the store and which is
+the oldest that can still be played. That read sends nothing about you beyond the connection itself.</p>
 
 <h2>3. Optional Google sign-in</h2>
 <p>The app offers an optional feature that links your progress to a Google account, so you can restore
@@ -459,8 +495,9 @@ take the following approach for every player, regardless of age:</p>
   measure advertisements and to prevent reward fraud, as described in Section 2.4. Where you have consented
   to personalised advertising, Google also uses that identifier to select ads based on your interests.
   The only other third parties that receive anything are Meta, which receives only the install and launch
-  information Section 2.7 lists, and Google Analytics for Firebase, which receives only the usage statistics
-  Section 2.8 lists &mdash; never game progress &mdash; and, where consent is required, only with it.</li>
+  information Section 2.7 lists, Google Analytics for Firebase and Firebase Crashlytics, which receive only the
+  usage statistics and crash reports Sections 2.8 and 2.10 list &mdash; never game progress &mdash; and, where
+  consent is required, only with it, and Expo, which receives only the update requests Section 2.11 describes.</li>
 </ul>
 <p>The identifiers we do store &mdash; the anonymous account ID and the app-generated device identifier &mdash;
 are used only to run the game itself: saving your progress, restoring it, and fixing crashes. They are
@@ -485,6 +522,8 @@ delete all of your child&rsquo;s data directly from the app&rsquo;s Settings scr
   <li>Protect against fraud and abuse of the ad reward system</li>
   <li>Measure which of our own ads for Foreword, on Meta&rsquo;s services, led to the app being installed and opened, as described in Section 2.7</li>
   <li>Count how many people install and open the app, and how often they return to it, as described in Section 2.8</li>
+  <li>Find and fix the faults that make the app crash, as described in Section 2.10</li>
+  <li>Keep the app up to date, as described in Section 2.11</li>
 </ol>
 <p>We do <strong>not</strong> use it for profiling, credit or eligibility decisions, or automated decision-making
 that produces legal or similarly significant effects.</p>
@@ -492,9 +531,9 @@ that produces legal or similarly significant effects.</p>
 <h2>6. Legal bases for processing (EEA/UK users)</h2>
 <p>Where the GDPR or UK GDPR applies, we rely on:</p>
 <ul>
-  <li><strong>Contract</strong> (Art. 6(1)(b)) &mdash; to provide the game and save your progress</li>
-  <li><strong>Legitimate interests</strong> (Art. 6(1)(f)) &mdash; to diagnose faults, keep the app secure, and prevent abuse of ad rewards</li>
-  <li><strong>Consent</strong> (Art. 6(1)(a)) &mdash; where required for advertising in your region, collected through Google&rsquo;s consent form before ads are shown, for the install measurement in Section 2.7, for the usage statistics in Section 2.8, and for optional Google sign-in</li>
+  <li><strong>Contract</strong> (Art. 6(1)(b)) &mdash; to provide the game, keep it up to date (Section 2.11) and save your progress</li>
+  <li><strong>Legitimate interests</strong> (Art. 6(1)(f)) &mdash; to diagnose faults, keep the app secure, prevent abuse of ad rewards, and understand how the game is played so we can improve it, from the daily summaries in Section 2.2. They hold counts only, never what you type, and you may object to them as described in Section 9</li>
+  <li><strong>Consent</strong> (Art. 6(1)(a)) &mdash; where required for advertising in your region, collected through Google&rsquo;s consent form before ads are shown, for the install measurement in Section 2.7, for the usage statistics in Section 2.8 and the crash reports in Section 2.10, and for optional Google sign-in</li>
 </ul>
 <p>You may withdraw consent at any time; withdrawing it does not affect processing that already took place.</p>
 
@@ -510,9 +549,10 @@ not for its own advertising. We use the following service providers:</p>
 <tr><td><strong>Supabase Inc.</strong></td><td>Hosts the database and sign-in service that stores your anonymous account, progress, and logs</td><td><a href="https://supabase.com/privacy">supabase.com/privacy</a></td></tr>
 <tr><td><strong>Google (AdMob)</strong></td><td>Serves and measures the rewarded ads</td><td><a href="https://policies.google.com/privacy">policies.google.com/privacy</a></td></tr>
 <tr><td><strong>Meta Platforms (Meta SDK)</strong></td><td>Measures which of our ads on Facebook, Instagram and the Audience Network led to an install &mdash; Section 2.7</td><td><a href="https://www.facebook.com/privacy/policy">facebook.com/privacy/policy</a></td></tr>
-<tr><td><strong>Google (Google Analytics for Firebase)</strong></td><td>Counts installs, launches, sessions and shared cards &mdash; Section 2.8</td><td><a href="https://policies.google.com/privacy">policies.google.com/privacy</a></td></tr>
+<tr><td><strong>Google (Google Analytics for Firebase)</strong></td><td>Counts installs, launches, sessions, shared cards and update offers &mdash; Section 2.8</td><td><a href="https://policies.google.com/privacy">policies.google.com/privacy</a></td></tr>
+<tr><td><strong>Google (Firebase Crashlytics)</strong></td><td>Records the app&rsquo;s crashes so we can fix them &mdash; Section 2.10</td><td><a href="https://policies.google.com/privacy">policies.google.com/privacy</a></td></tr>
 <tr><td><strong>Google (Sign-In and Play Services)</strong></td><td>Optional account linking, only if you use it &mdash; including the on-device account chooser</td><td><a href="https://policies.google.com/privacy">policies.google.com/privacy</a></td></tr>
-<tr><td><strong>Expo / Expo Application Services</strong></td><td>Build and release tooling for the app</td><td><a href="https://expo.dev/privacy">expo.dev/privacy</a></td></tr>
+<tr><td><strong>Expo / Expo Application Services</strong></td><td>Build and release tooling for the app, and delivery of its over-the-air updates &mdash; Section 2.11</td><td><a href="https://expo.dev/privacy">expo.dev/privacy</a></td></tr>
 <tr><td><strong>Google Play</strong></td><td>Distributes the app; independently collects its own data about downloads</td><td><a href="https://policies.google.com/privacy">policies.google.com/privacy</a></td></tr>
 </tbody>
 </table>
@@ -533,6 +573,8 @@ Commission&rsquo;s Standard Contractual Clauses or an equivalent safeguard.</p>
   <li><strong>Anonymous accounts</strong> (those that never connected Google): deleted automatically after <strong>60 days</strong> with no activity, together with the player name, daily summaries (Section 2.2) and error reports attached to them. Such an account holds no game progress, which never left the device; if the app is opened again afterwards it simply creates a new anonymous account. Deleting your data yourself is immediate and does not wait for this.</li>
   <li><strong>Install measurement</strong> sent to Meta (Section 2.7): held by Meta under its own retention terms, set out in its privacy policy. It carries no account ID of ours, so deleting your data in the app does not reach it; resetting or deleting your device&rsquo;s advertising ID (Section 9) breaks the link between it and your device.</li>
   <li><strong>Usage statistics</strong> collected by Google Analytics for Firebase (Section 2.8): kept by Google as individual records for <strong>2 months</strong>, after which only aggregate counts, such as installs per day, remain. They carry no account ID of ours, so deleting your data in the app does not reach them; uninstalling the app or clearing its storage gives your device a new app-instance ID, which breaks the link between them and your device.</li>
+  <li><strong>Crash reports</strong> collected by Firebase Crashlytics (Section 2.10): kept by Google for <strong>90 days</strong>. Like the usage statistics they carry no account ID of ours, so deleting your data in the app does not reach them.</li>
+  <li><strong>Update requests</strong> to Expo&rsquo;s update service (Section 2.11): held by Expo under its own retention terms, set out in its privacy policy.</li>
   <li><strong>A replaced save</strong> (Section 2.2): kept alongside the account that replaced it, and deleted when you delete your data.</li>
   <li><strong>A deletion record:</strong> kept indefinitely after an account is deleted. It holds the date of
   the deletion, the app version that requested it, and a one-way keyed digest of the deleted account
@@ -586,7 +628,7 @@ reconnecting the same Google account. One record survives it, described in Secti
 tracking system-wide: on Android, that is <strong>Settings &rarr; Google &rarr; Ads &rarr;
 <em>Delete advertising ID</em></strong>. That also stops Meta from matching this device to an ad (Section 2.7).
 Where Google&rsquo;s consent form is shown, its privacy options entry in <strong>Settings</strong> withdraws
-consent for personalised ads, install measurement and the usage statistics in Section 2.8. If you have a Facebook or Instagram account,
+consent for personalised ads, install measurement, the usage statistics in Section 2.8 and the crash reports in Section 2.10. If you have a Facebook or Instagram account,
 Meta&rsquo;s own <strong>Your activity off Meta technologies</strong> setting lets you disconnect the activity
 apps send it from your account.</p>
 
@@ -623,7 +665,7 @@ Country: Philippines</p>
 <p>For data protection questions under Philippine law, you may also contact the National Privacy
 Commission at <a href="https://privacy.gov.ph">privacy.gov.ph</a>.</p>
 
-<footer>Foreword &mdash; Privacy Policy. Last updated 17 November 2026.</footer>
+<footer>Foreword &mdash; Privacy Policy. Last updated 24 November 2026.</footer>
 
 </main>
 </body>
